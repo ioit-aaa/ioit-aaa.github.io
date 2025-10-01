@@ -1,6 +1,6 @@
 # Basic website information configuration
 site_name: ZhiZu.io
-site_url: https://nry2025.xyz
+site_url: https://ioit-aaa.github.io
 # Website Style Configuration
 theme:
   name: material
