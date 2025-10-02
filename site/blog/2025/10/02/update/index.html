@@ -8,11 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://ioit-aaa.github.io/blog/2025/10/02/livereload/">
+        <link rel="canonical" href="https://ioit-aaa.github.io/blog/2025/10/02/update/">
       
       
+        <link rel="prev" href="../livereload/">
       
-        <link rel="next" href="../update/">
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions - ZhiZu.io</title>
+        <title>删除一行多余的无用配置 - ZhiZu.io</title>
       
     
     
@@ -69,11 +69,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#fixci-blog-plugin-causes-livereload-failure-investigation-and-solutions" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions
+              删除一行多余的无用配置
             
           </span>
         </div>
@@ -388,70 +383,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#problem-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem Description
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initial-investigation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Investigation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deep-dive-precise-problem-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deep Dive: Precise Problem Boundaries
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#root-cause-analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Root Cause Analysis
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solutions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solutions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -507,7 +438,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-10-02 00:00:00+00:00" class="md-ellipsis">October 2, 2025</time>
+                        <time datetime="2025-10-02 19:08:21+08:00" class="md-ellipsis">October 2, 2025</time>
                       </div>
                     </li>
                     
@@ -519,7 +450,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              1 min read
                             
                           </span>
                         </div>
@@ -543,186 +474,25 @@
 
 
 
-<h1 id="fixci-blog-plugin-causes-livereload-failure-investigation-and-solutions">fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions</h1>
-<h2 id="problem-description">Problem Description</h2>
-<div class="admonition bug">
-<p class="admonition-title">Live Reload Failure</p>
-<p>While developing the <a href="https://ioit-aaa.github.io">ZhiZu.io</a> documentation site, we encountered a persistent issue: after adding blog plugins, the <code>mkdocs serve</code> live reload functionality stopped working.</p>
-<div class="admonition failure">
-<p class="admonition-title">Impact Analysis</p>
-<ul>
-<li>Every file modification required a manual server restart</li>
-<li>Development efficiency reduced by approximately 70%</li>
-<li>Debugging cycle time increased significantly</li>
-</ul>
-</div>
-</div>
-<h2 id="initial-investigation">Initial Investigation</h2>
-<div class="admonition question">
-<p class="admonition-title">Plugin Configuration Analysis</p>
-<p>We first suspected plugin configuration order issues. Examining the <code>mkdocs.yml</code> configuration:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">plugins</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">social</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blog</span>
-</span></code></pre></div>
-<div class="admonition failure">
-<p class="admonition-title">Initial Attempt Failed</p>
-<p>We adjusted the plugin order, moving search plugin to the first position, but the problem persisted:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">plugins</span><span class="p">:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">social</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blog</span>
-</span></code></pre></div>
-</div>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Key Breakthrough</p>
-<p>After testing various approaches, we discovered an effective parameter combination:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload<span class="w"> </span>--dirtyreload
-</span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Partial Success</p>
-<p>This solution resolved hot reload for most pages, but one issue remained...</p>
-</div>
-</div>
-<!-- more -->
+  <h1>删除一行多余的无用配置</h1>
 
-<h2 id="deep-dive-precise-problem-boundaries">Deep Dive: Precise Problem Boundaries</h2>
-<div class="admonition info">
-<p class="admonition-title">Systematic Testing Approach</p>
-<p>With forced hot reload parameters enabled, we conducted more detailed testing and discovered a critical pattern:</p>
-<div class="admonition check">
-<p class="admonition-title">Working Hot Reload Scope</p>
-<p><strong>Normal Functionality Areas:</strong>
-- Regular documentation pages (all files in <code>/docs/</code> directory)
-- Configuration files (<code>mkdocs.yml</code>)
-- Theme resources and style files</p>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Persistent Issues</p>
-<p><strong>Areas Still Requiring Manual Restart:</strong>
-- Blog posts (any content in <code>/blog/</code> directory)
-- Blog post Front Matter metadata changes<br />
-- Blog directory structure modifications</p>
-</div>
-</div>
-<h2 id="root-cause-analysis">Root Cause Analysis</h2>
-<div class="admonition warning">
-<p class="admonition-title">Architecture Conflict Identified</p>
-<p>This precise boundary indicates that: <strong>the blog plugin creates an independent content management mechanism for blog content</strong>.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Technical Deep Dive</p>
-<ol>
-<li><strong>File Watch Isolation</strong> </li>
-<li>Blog plugin takes over file watching events for <code>/blog/</code> directory</li>
-<li>
-<p>Creates separate event handlers that bypass standard monitoring</p>
-</li>
-<li>
-<p><strong>Independent Build Cache</strong></p>
-</li>
-<li>Blog content uses separate caching system  </li>
-<li>
-<p>Implements custom cache invalidation logic</p>
-</li>
-<li>
-<p><strong>Architecture Conflict</strong></p>
-</li>
-<li>Plugin's complex functionality conflicts with MkDocs core hot reload mechanism</li>
-<li>Parallel systems create race conditions and update conflicts</li>
-</ol>
-</div>
-</div>
-<h2 id="solutions">Solutions</h2>
-<div class="admonition example">
-<p class="admonition-title">Development Environment Solution</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Recommended development command</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload<span class="w"> </span>--dirtyreload
+<p>之前不小心添加了一项多余配置，更新一下，将这个多余配置删掉</p>
+<div class="language-diff highlight"><span class="filename">git diff</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh">diff --git a/mkdocs.yml b/mkdocs.yml</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gh">index 4e980a5..8e4f184 100644</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gd">--- a/mkdocs.yml</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gi">+++ b/mkdocs.yml</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gu">@@ -48,7 +48,6 @@ markdown_extensions:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w"> </span>  - pymdownx.critic
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w"> </span>  - pymdownx.tabbed:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="hll"><span class="w"> </span>      alternate_style: true
+</span></span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="hll"><span class="gd">-      alternate_style: true</span>
+</span></span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w"> </span>  - pymdownx.keys
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w"> </span>  - pymdownx.details
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w"> </span>  - admonition
 </span></code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Parameter Analysis</p>
-<ul>
-<li><code>--livereload</code>: Forces browser auto-refresh by maintaining persistent connection</li>
-<li><code>--dirtyreload</code>: Uses incremental builds for faster performance and reduced latency</li>
-</ul>
-</div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Optimized Development Workflow</p>
-<p>Based on problem boundaries, we adopt a layered development strategy:</p>
-<div class="admonition success">
-<p class="admonition-title">For Regular Content</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Fast iteration development</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload<span class="w"> </span>--dirtyreload
-</span></code></pre></div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">For Blog Content</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># Required workflow for blog development:
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>1. Modify blog posts
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2. Manually restart server (Ctrl+C → mkdocs serve)
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>3. Verify changes and continue development
-</span></code></pre></div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Technical Insights &amp; Architecture Implications</p>
-<p>The discovery that only blog pages require restarts reveals important architecture insights:</p>
-<div class="admonition abstract">
-<p class="admonition-title">Plugin Architecture Analysis</p>
-<ul>
-<li>Blog plugins often implement custom content processors</li>
-<li>These processors may not integrate seamlessly with MkDocs' watch system</li>
-<li>The <code>--livereload --dirtyreload</code> combination forces a workaround at the system level</li>
-</ul>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Future Considerations</p>
-<ul>
-<li>Should blog plugins be refactored for better integration?</li>
-<li>Are there alternative plugins with better hot reload support?</li>
-<li>Could custom event handlers bridge the gap between systems?</li>
-</ul>
-</div>
-</div>
-<h2 id="conclusion">Conclusion</h2>
-<div class="admonition summary">
-<p class="admonition-title">Investigation Outcome &amp; Impact</p>
-<p>This investigation demonstrates the importance of understanding precise problem boundaries in technical troubleshooting.</p>
-<div class="admonition success">
-<p class="admonition-title">Achievements</p>
-<ul>
-<li>Identified exact scope of live reload failure</li>
-<li>Developed effective workaround for 80% of use cases</li>
-<li>Established clear development protocols for different content types</li>
-</ul>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Limitations</p>
-<ul>
-<li>Blog content still requires manual intervention</li>
-<li>Complete automation not achievable with current plugin architecture</li>
-</ul>
-</div>
-</div>
-<div class="admonition quote">
-<p class="admonition-title">Lessons Learned &amp; Best Practices</p>
-<div class="admonition check">
-<p class="admonition-title">Successful Strategies</p>
-<ol>
-<li><strong>Systematic Boundary Testing</strong> - Always test problem boundaries precisely</li>
-<li><strong>Parameter Exploration</strong> - Command-line parameters often provide crucial workarounds</li>
-</ol>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Challenges Identified</p>
-<ol>
-<li><strong>Plugin Complexity</strong> - Plugin conflicts can manifest in subtle ways</li>
-<li><strong>Architecture Understanding</strong> - Understanding the exact scope of an issue is half the solution</li>
-</ol>
-</div>
-</div>
+<mark class="critic block">
+<p>再插句题外话，某编剧属于是演都不演了</p>
+</mark>
 
 
 
@@ -758,22 +528,22 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-        
           
-          <a href="../update/" class="md-footer__link md-footer__link--next" aria-label="Next: 删除一行多余的无用配置">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                删除一行多余的无用配置
-              </div>
-            </div>
+          <a href="../livereload/" class="md-footer__link md-footer__link--prev" aria-label="Previous: fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions
+              </div>
             </div>
           </a>
+        
         
       </nav>
     

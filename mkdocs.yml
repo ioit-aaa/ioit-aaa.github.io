@@ -48,7 +48,6 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.tabbed:
       alternate_style: true
-      alternate_style: true
   - pymdownx.keys
   - pymdownx.details
   - admonition
