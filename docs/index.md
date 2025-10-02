@@ -2,6 +2,7 @@
 title: Home
 hide:
   - footer
+comments: true
 ---
 # Welcome to ZhiZu.io
 

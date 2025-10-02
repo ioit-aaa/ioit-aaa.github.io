@@ -4,6 +4,7 @@ site_url: https://ioit-aaa.github.io
 # Website Style Configuration
 theme:
   name: material
+  custom_dir: overrides
   palette:
         scheme: slate
         primary: black
@@ -33,6 +34,7 @@ copyright: >
 plugins:
   - search
   - blog
+  - meta
 
 # Draft an extension
 markdown_extensions:
