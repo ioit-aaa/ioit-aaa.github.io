@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://ioit-aaa.github.io/blog/">
+        <link rel="canonical" href="https://ioit-aaa.github.io/blog/2025/10/02/livereload/">
       
       
-        <link rel="prev" href="..">
       
       
-        <link rel="next" href="archive/2025/">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>Blog - ZhiZu.io</title>
+        <title>fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions - ZhiZu.io</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.2a3383ac.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#fixci-blog-plugin-causes-livereload-failure-investigation-and-solutions" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +84,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="ZhiZu.io" class="md-header__button md-logo" aria-label="ZhiZu.io" data-md-component="logo">
+    <a href="../../../../.." title="ZhiZu.io" class="md-header__button md-logo" aria-label="ZhiZu.io" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions
             
           </span>
         </div>
@@ -182,7 +178,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -191,7 +189,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ZhiZu.io" class="md-nav__button md-logo" aria-label="ZhiZu.io" data-md-component="logo">
+    <a href="../../../../.." title="ZhiZu.io" class="md-nav__button md-logo" aria-label="ZhiZu.io" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -209,7 +207,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -272,19 +270,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   
@@ -295,7 +284,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -348,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="archive/2025/" class="md-nav__link">
+      <a href="../../../../archive/2025/" class="md-nav__link">
         
   
   
@@ -387,6 +375,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -399,6 +389,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-investigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Investigation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-precise-problem-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Dive: Precise Problem Boundaries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-cause-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Root Cause Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solutions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -406,43 +458,91 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="blog">Blog</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://cdn.jsdelivr.net/gh/ioit-aaa/picx-images-hosting@master/20251001/20251001_19532571.4g4vd6txc9.png" alt="ioit-aaa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-10-02 00:00:00+00:00">October 2, 2025</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://cdn.jsdelivr.net/gh/ioit-aaa/picx-images-hosting@master/20251001/20251001_19532571.4g4vd6txc9.png" alt="ioit-aaa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://nry2025.xyz">ioit-aaa</a>
+                        
+                      </strong>
+                      <br>
+                      ZhiZu.io CEO
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-10-02 00:00:00+00:00" class="md-ellipsis">October 2, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
           
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fixci-blog-plugin-causes-livereload-failure-investigation-and-solutions"><a class="toclink" href="2025/10/02/livereload/">fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions</a></h2>
-<h3 id="problem-description"><a class="toclink" href="2025/10/02/livereload/#problem-description">Problem Description</a></h3>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+<h1 id="fixci-blog-plugin-causes-livereload-failure-investigation-and-solutions">fix(ci): Blog Plugin Causes LiveReload Failure - Investigation and Solutions</h1>
+<h2 id="problem-description">Problem Description</h2>
 <div class="admonition bug">
 <p class="admonition-title">Live Reload Failure</p>
 <p>While developing the <a href="https://ioit-aaa.github.io">ZhiZu.io</a> documentation site, we encountered a persistent issue: after adding blog plugins, the <code>mkdocs serve</code> live reload functionality stopped working.</p>
@@ -455,7 +555,7 @@
 </ul>
 </div>
 </div>
-<h3 id="initial-investigation"><a class="toclink" href="2025/10/02/livereload/#initial-investigation">Initial Investigation</a></h3>
+<h2 id="initial-investigation">Initial Investigation</h2>
 <div class="admonition question">
 <p class="admonition-title">Plugin Configuration Analysis</p>
 <p>We first suspected plugin configuration order issues. Examining the <code>mkdocs.yml</code> configuration:</p>
@@ -484,29 +584,162 @@
 <p>This solution resolved hot reload for most pages, but one issue remained...</p>
 </div>
 </div>
+<!-- more -->
 
-    
-      <nav class="md-post__action">
-        <a href="2025/10/02/livereload/">
-          Continue reading
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-      
-        
-          
+<h2 id="deep-dive-precise-problem-boundaries">Deep Dive: Precise Problem Boundaries</h2>
+<div class="admonition info">
+<p class="admonition-title">Systematic Testing Approach</p>
+<p>With forced hot reload parameters enabled, we conducted more detailed testing and discovered a critical pattern:</p>
+<div class="admonition check">
+<p class="admonition-title">Working Hot Reload Scope</p>
+<p><strong>Normal Functionality Areas:</strong>
+- Regular documentation pages (all files in <code>/docs/</code> directory)
+- Configuration files (<code>mkdocs.yml</code>)
+- Theme resources and style files</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Persistent Issues</p>
+<p><strong>Areas Still Requiring Manual Restart:</strong>
+- Blog posts (any content in <code>/blog/</code> directory)
+- Blog post Front Matter metadata changes<br />
+- Blog directory structure modifications</p>
+</div>
+</div>
+<h2 id="root-cause-analysis">Root Cause Analysis</h2>
+<div class="admonition warning">
+<p class="admonition-title">Architecture Conflict Identified</p>
+<p>This precise boundary indicates that: <strong>the blog plugin creates an independent content management mechanism for blog content</strong>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Technical Deep Dive</p>
+<ol>
+<li><strong>File Watch Isolation</strong> </li>
+<li>Blog plugin takes over file watching events for <code>/blog/</code> directory</li>
+<li>
+<p>Creates separate event handlers that bypass standard monitoring</p>
+</li>
+<li>
+<p><strong>Independent Build Cache</strong></p>
+</li>
+<li>Blog content uses separate caching system  </li>
+<li>
+<p>Implements custom cache invalidation logic</p>
+</li>
+<li>
+<p><strong>Architecture Conflict</strong></p>
+</li>
+<li>Plugin's complex functionality conflicts with MkDocs core hot reload mechanism</li>
+<li>Parallel systems create race conditions and update conflicts</li>
+</ol>
+</div>
+</div>
+<h2 id="solutions">Solutions</h2>
+<div class="admonition example">
+<p class="admonition-title">Development Environment Solution</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Recommended development command</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload<span class="w"> </span>--dirtyreload
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Parameter Analysis</p>
+<ul>
+<li><code>--livereload</code>: Forces browser auto-refresh by maintaining persistent connection</li>
+<li><code>--dirtyreload</code>: Uses incremental builds for faster performance and reduced latency</li>
+</ul>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Optimized Development Workflow</p>
+<p>Based on problem boundaries, we adopt a layered development strategy:</p>
+<div class="admonition success">
+<p class="admonition-title">For Regular Content</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Fast iteration development</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload<span class="w"> </span>--dirtyreload
+</span></code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">For Blog Content</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># Required workflow for blog development:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>1. Modify blog posts
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2. Manually restart server (Ctrl+C → mkdocs serve)
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>3. Verify changes and continue development
+</span></code></pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Technical Insights &amp; Architecture Implications</p>
+<p>The discovery that only blog pages require restarts reveals important architecture insights:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Plugin Architecture Analysis</p>
+<ul>
+<li>Blog plugins often implement custom content processors</li>
+<li>These processors may not integrate seamlessly with MkDocs' watch system</li>
+<li>The <code>--livereload --dirtyreload</code> combination forces a workaround at the system level</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Future Considerations</p>
+<ul>
+<li>Should blog plugins be refactored for better integration?</li>
+<li>Are there alternative plugins with better hot reload support?</li>
+<li>Could custom event handlers bridge the gap between systems?</li>
+</ul>
+</div>
+</div>
+<h2 id="conclusion">Conclusion</h2>
+<div class="admonition summary">
+<p class="admonition-title">Investigation Outcome &amp; Impact</p>
+<p>This investigation demonstrates the importance of understanding precise problem boundaries in technical troubleshooting.</p>
+<div class="admonition success">
+<p class="admonition-title">Achievements</p>
+<ul>
+<li>Identified exact scope of live reload failure</li>
+<li>Developed effective workaround for 80% of use cases</li>
+<li>Established clear development protocols for different content types</li>
+</ul>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Limitations</p>
+<ul>
+<li>Blog content still requires manual intervention</li>
+<li>Complete automation not achievable with current plugin architecture</li>
+</ul>
+</div>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Lessons Learned &amp; Best Practices</p>
+<div class="admonition check">
+<p class="admonition-title">Successful Strategies</p>
+<ol>
+<li><strong>Systematic Boundary Testing</strong> - Always test problem boundaries precisely</li>
+<li><strong>Parameter Exploration</strong> - Command-line parameters often provide crucial workarounds</li>
+</ol>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Challenges Identified</p>
+<ol>
+<li><strong>Plugin Complexity</strong> - Plugin conflicts can manifest in subtle ways</li>
+<li><strong>Architecture Understanding</strong> - Understanding the exact scope of an issue is half the solution</li>
+</ol>
+</div>
+</div>
 
 
 
-<nav class="md-pagination">
+
+
+
+
   
-</nav>
-        
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -517,44 +750,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Home
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="archive/2025/" class="md-footer__link md-footer__link--next" aria-label="Next: 2025">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                2025
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -626,10 +821,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["search.share", "navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["search.share", "navigation.footer", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
