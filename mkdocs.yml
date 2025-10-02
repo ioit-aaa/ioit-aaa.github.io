@@ -31,7 +31,6 @@ copyright: >
 
 # Plugin Configuration
 plugins:
-  - social
   - search
   - blog
 
