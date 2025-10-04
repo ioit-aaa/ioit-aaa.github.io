@@ -14,7 +14,7 @@ We're working on a tutorial book, but please keep checking our blog until we're 
 
 We actually have an xmpp channel
 
-In fact, we also have a TikTok group
+In fact, we also have a DOUYIN group
 
  - [x] XMPP
  - [x] DOUYIN
