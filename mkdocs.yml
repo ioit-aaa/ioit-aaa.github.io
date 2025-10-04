@@ -76,6 +76,6 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 # Git Repo
-repo_url: https://github.com/ioit-aaa/nry2025.xyz
-repo_name: ioit-aaa/nry2025.xyz
+repo_url: https://github.com/ioit-aaa/ioit-aaa.github.io
+repo_name: ioit-aa/ioit-aaa.github.io
 edit_uri: edit/main/docs/
