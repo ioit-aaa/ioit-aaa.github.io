@@ -42,7 +42,7 @@ plugins:
   - blog
   - meta
   - git-committers:
-      repository: ioit-aaa/nry2025.xyz
+      repository: ioit-aaa/ioit-aaa.github.io
       branch: main
   - git-revision-date-localized:
       enable_creation_date: true
@@ -77,5 +77,5 @@ markdown_extensions:
 
 # Git Repo
 repo_url: https://github.com/ioit-aaa/ioit-aaa.github.io
-repo_name: ioit-aa/ioit-aaa.github.io
+repo_name: ioit-aaa/ioit-aaa.github.io
 edit_uri: edit/main/docs/
