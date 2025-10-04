@@ -5,6 +5,10 @@ site_url: https://ioit-aaa.github.io
 theme:
   name: material
   custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
   palette:
         scheme: slate
         primary: black
@@ -13,6 +17,8 @@ theme:
     - search.share
     - navigation.footer
     - content.code.copy
+    - content.action.view
+    - content.action.edit
 
 # extra:
 extra:
@@ -35,6 +41,11 @@ plugins:
   - search
   - blog
   - meta
+  - git-committers:
+      repository: ioit-aaa/ioit-aaa.github.io
+      branch: main
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 # Draft an extension
 markdown_extensions:
@@ -44,7 +55,11 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.critic
@@ -54,6 +69,13 @@ markdown_extensions:
   - pymdownx.details
   - admonition
   - attr_list
+  - def_list
+  - footnotes
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Git Repo
+repo_url: https://github.com/ioit-aaa/ioit-aaa.github.io
+repo_name: ioit-aaa/ioit-aaa.github.io
+edit_uri: edit/main/docs/
