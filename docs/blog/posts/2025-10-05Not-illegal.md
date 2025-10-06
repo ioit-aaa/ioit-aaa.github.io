@@ -15,6 +15,8 @@ slug: "Not-illegal"
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115321247702134&bvid=BV1JXxMzgEfW&cid=32857458369&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 我看到这条视频时，兴奋极了。
 
+<!-- more -->
+
 我当时啥也没想，就去火急火燎的注册了小红书，我心里是寻思 哇卡卡 竟然是熊出没第1季第1集新邻居编剧吗？
 
 当时我记得还是晚上11:30 那一刻，我不是一个程序员，我只是一个看到童年回忆在向我招手的普通粉丝。那种兴奋感，是二进制世界里编译成功后的纯粹喜悦。我怀揣着这种最原始的善意和热情，一头扎进了这个新世界，完全没预料到，我将要经历的，是一场从“建造者”到“流放者”的转变。
