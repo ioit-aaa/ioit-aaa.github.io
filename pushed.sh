@@ -1,4 +1,5 @@
 # Push
+mkdocs build
 git add .
 git commit -sam 'Update'
 git push
