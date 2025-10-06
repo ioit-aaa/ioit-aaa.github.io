@@ -6,3 +6,4 @@ git push
 
 # Deploy the Web site
 mkdocs gh-deploy
+git push
