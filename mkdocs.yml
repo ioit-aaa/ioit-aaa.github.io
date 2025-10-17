@@ -11,8 +11,8 @@ theme:
     view: material/eye
   palette:
         scheme: slate
-        primary: black
-        accent: teal
+        primary: pink
+        accent: pink
   features:
     - search.share
     - navigation.footer
