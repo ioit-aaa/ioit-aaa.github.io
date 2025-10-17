@@ -30,6 +30,9 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
+  social:
+    - icon: simple/tiktok
+      link: https://m.douyin.com/share/user/MS4wLjABAAAAdPlGRhTw_UP9160A74vVBlN0CemdTOb2IcNT0aie3N7WqwkGjwmF7H9L70udMVRe
 
 # Copyright Information Configuration
 copyright: >
