@@ -33,11 +33,13 @@ extra:
   social:
     - icon: simple/tiktok
       link: https://m.douyin.com/share/user/MS4wLjABAAAAdPlGRhTw_UP9160A74vVBlN0CemdTOb2IcNT0aie3N7WqwkGjwmF7H9L70udMVRe
+    - icon: simple/github
+      link: https://github.com/ioit-aaa
 
 # Copyright Information Configuration
 copyright: >
   Copyright &copy; 2025 <a href="https://nry2025.xyz">ZhiZu.io</a> –
-  <a href="#__consent">Change cookie settings</a>
+  <a href="#__consent">Change cookie settings</a> – <a href='about'>About</a>
 
 # Plugin Configuration
 plugins:
