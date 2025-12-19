@@ -1,7 +1,9 @@
 ZhiZu.io
 ========
+My personal website, where I record some of my thoughts and write articles; I also maintain a blog there.
 
 Website:
+--------
 
     https://ioit-aaa.github.io
 
@@ -10,8 +12,9 @@ To build this documentation, use:
     mkdocs build
 
 Commands for repo owner
-=======================
+-----------------------
 
 Push to gh-pages branch:
+------------------------
 
     mkdocs gh-deploy
