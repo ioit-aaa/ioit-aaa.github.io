@@ -19,5 +19,6 @@ Push to gh-pages branch:
 
     mkdocs gh-deploy
 
+------------------------------------------
 Within the root directory of the source code, there is also a script containing the aforementioned steps. This script was written to facilitate the release of website modifications.
 )
